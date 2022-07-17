@@ -1,5 +1,4 @@
 import java.util.*;
-
 public class ArrayListReview {
     public static void main(String[] args) {
 
@@ -14,7 +13,8 @@ public class ArrayListReview {
 
         // Iteration on ArrayLists
         // 1. For Loop with get(index)
-        for(int i=0; i<students.size();i++) System.out.println(students.get(i));
+        for(int i=0; i<students.size();i++)
+            System.out.println(students.get(i));
 
         // 2. Iterator
         // Forward Iteration
@@ -34,11 +34,13 @@ public class ArrayListReview {
 
         // 3. for each loop
         System.out.println("Printing For each loop..........");
-        for(Student student:students) System.out.println(student);
+        for(Student student:students)
+            System.out.println(student);
 
         System.out.println("Printing with Lambda..........");
         // 4. Lambda
         students.forEach(student -> System.out.println(student) );
+
         // Sorting Elements in List
         System.out.println("Printing with sorted List by comp..........");
         Collections.sort(students,new sortByIdDesc());
@@ -50,14 +52,12 @@ public class ArrayListReview {
 
     }
     static class sortByIdDesc implements Comparator<Student>{
-
         @Override
         public int compare(Student o1, Student o2) {
             return o1.id-o2.id;
         }
     }
     static class sortByNameDesc implements Comparator<Student>{
-
         @Override
         public int compare(Student o1, Student o2) {
             return o2.name.compareToIgnoreCase(o1.name);

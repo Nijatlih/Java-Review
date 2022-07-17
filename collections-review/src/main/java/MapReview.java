@@ -22,8 +22,10 @@ public class MapReview {
         }
         // starting from string, check if the char count equals 1
         for(Character ch:str.toCharArray()){
-            if(map.get(ch)==1) return ch;
+            if(map.get(ch)==1)
+                return ch;
         }
+//        return Character.MIN_VALUE;
         return null;
     }
 }
